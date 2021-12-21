@@ -162,9 +162,10 @@ int outMat1(double mat[], int n, int m)
 	{
 		for (int j = 0; j < m; j++)
 		{
-			cout << setprecision(3);
-			cout << mat[i * n + j] << ' ';
-			//mat[i * n + j]  =0;
+			// cout << setprecision(3);
+			// cout << mat[i * n + j] << ' ';
+			// //mat[i * n + j]  =0;
+			printf(" %10.3e", mat[i * n + j]);
 		}
 		cout << endl;
 	}
@@ -187,8 +188,9 @@ int outMat1(double mat[], int l, int n, int m)
 	{
 		for (int j = 0; j < m_n; j++)
 		{
-			cout << setprecision(3);
-			cout << mat[i * l + j] << ' ';
+			// cout << setprecision(3);
+			// cout << mat[i * l + j] << ' ';
+			printf(" %10.3e", mat[i * l + j]);
 		}
 		cout << endl;
 	}

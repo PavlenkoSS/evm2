@@ -54,19 +54,25 @@ int main(int nargs, char** args)
 	}
 	cout << "M = " << endl;
 	outMat1(M, n, m);
-	double start_time = clock();
+
 	double nrm = normByMaxMat(M, n); // перенести в один метод 
-	threeMat(M,n); //
+	//
 	//threeMat(M, n);
-	outMat1(M, n, m);
-	matToVecs(M, a, c, d, n); //
-	eigenBisection(lambdas, l, a, c, d, n, nrm, eps); //
+	//outMat1(M, n, m);
+
+	// threeMat(M,n);
+	// matToVecs(M, a, c, d, n); //
+	// eigenBisection(lambdas, l, a, c, d, n, nrm, eps); //
+	double start_time = clock();
+	superFun(M,n, a,c,d, lambdas,l,nrm,eps);
+	double end_time = clock();
+
 	fulMat(M, n, k, filename);
 	cout << setprecision(3);
 	cout << "First invariant " << firstInvariant(M, lambdas, n) << endl;
 	cout << "Second invariant " << secondInvariant(M, lambdas, n) << endl;
 	outMat1(lambdas, 1, n, m);
-	double end_time = clock();
+	
 	cout << "Time of solving = " << (-start_time + end_time) / CLOCKS_PER_SEC << endl;
 	delete[]M;
 	delete[]a;

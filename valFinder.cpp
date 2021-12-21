@@ -3,7 +3,12 @@
 using namespace std;
 
 
-
+void superFun(double(*M), int n,  double(*a), double(*c), double(*d),double(*lambdas), double(*l), double nrm, double eps)
+{
+	threeMat(M,n);
+	matToVecs(M, a, c, d, n); //
+	eigenBisection(lambdas, l, a, c, d, n, nrm, eps);
+}
 int uptriangleMat(double(*mat), double(*tam), double(*m), double(*t), int n, int I, int J, double eps)
 {
 	double x = mat[I * n + I];

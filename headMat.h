@@ -36,5 +36,5 @@ double secondInvariant(double(*mat), double(*lambdas), int n);
 int outMat1(double mat[], int l, int n, int m);
 //void subEigenBisection(double(*lambdas), double(*l), double(*a), double(*c), double(*d), int n, double lbord, double rbord, int numEig, int L, double eps);
 int threeMat(double* mat, int n);
-
+void superFun(double(*mat), int n,  double(*a), double(*c), double(*d),double(*lambdas), double(*l), double nrm, double eps);
 #endif
